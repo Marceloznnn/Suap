@@ -1,0 +1,265 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #206d5a;; /* Cor de fundo mais fiel */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1280px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Painel esquerdo */
+.left-panel {
+    flex: 1;
+    background-color: #206d5a;
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Linha verde vertical à esquerda */
+.left-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: #32ff96;
+}
+
+/* Logo SUAP */
+.logo img {
+    width: 150px;
+    margin-bottom: 40px;
+}
+
+/* Descrição */
+.description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Ilustração */
+.illustration {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.illustration img {
+    width: 100%;
+    max-width: 340px;
+}
+
+/* Painel direito */
+.right-panel {
+    flex: 1;
+    background-color: #245047;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Caixa de login */
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Títulos */
+.login-box h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.subtitle {
+    margin: 10px 0 25px 0;
+    color: #d3e4e1;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+label {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: #eef3fb;
+    color: #222;
+    transition: border 0.3s ease;
+}
+
+/* Wrapper da senha */
+.password-wrapper {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Botão de acesso */
+.btn-acessar {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #0ae38e;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-acessar:hover {
+    background-color: #0cc37a;
+}
+
+/* Esqueceu a senha */
+.forgot {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 0.85rem;
+    color: #a9cfc7;
+}
+
+.forgot a {
+    color: #a9cfc7;
+    text-decoration: none;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Linha separadora */
+hr {
+    border: 0;
+    border-top: 1px solid #4e9c8d;
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* Botão Gov.br */
+.govbr-btn {
+    background-color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 1rem;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: #205c5e;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.govbr-btn:hover {
+    transform: scale(1.02);
+}
+
+.govbr {
+    color: #205c5e;
+}
+
+.govbr-br {
+    color: #f4b000;
+}
+
+/* Primeira vez */
+.login-box p:last-child {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.login-box p:last-child a {
+    color: #0ae38e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-box p:last-child a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .left-panel {
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo img {
+        margin: 0 auto 20px auto;
+    }
+
+    .illustration img {
+        margin: 20px auto 0 auto;
+    }
+}
