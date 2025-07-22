@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #206d5a;; /* Cor de fundo mais fiel */
+    background-color: #206d5a;; 
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -23,7 +23,6 @@ body {
     overflow: hidden;
 }
 
-/* Painel esquerdo */
 .left-panel {
     flex: 1;
     background-color: #206d5a;
@@ -35,7 +34,6 @@ body {
     position: relative;
 }
 
-/* Linha verde vertical à esquerda */
 .left-panel::before {
     content: '';
     position: absolute;
@@ -46,20 +44,17 @@ body {
     background-color: #32ff96;
 }
 
-/* Logo SUAP */
 .logo img {
     width: 150px;
     margin-bottom: 40px;
 }
 
-/* Descrição */
 .description {
     font-size: 1.25rem;
     line-height: 1.6;
     font-weight: 300;
 }
 
-/* Ilustração */
 .illustration {
     display: flex;
     align-items: flex-end;
@@ -72,7 +67,6 @@ body {
     max-width: 340px;
 }
 
-/* Painel direito */
 .right-panel {
     flex: 1;
     background-color: #245047;
@@ -82,7 +76,6 @@ body {
     justify-content: center;
 }
 
-/* Caixa de login */
 .login-box {
     width: 100%;
     max-width: 400px;
@@ -94,7 +87,6 @@ body {
     align-items: center;
 }
 
-/* Títulos */
 .login-box h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -108,7 +100,6 @@ body {
     text-align: center;
 }
 
-/* Formulário */
 form {
     display: flex;
     flex-direction: column;
@@ -134,7 +125,6 @@ input[type="password"] {
     transition: border 0.3s ease;
 }
 
-/* Wrapper da senha */
 .password-wrapper {
     position: relative;
 }
@@ -148,7 +138,6 @@ input[type="password"] {
     cursor: pointer;
 }
 
-/* Botão de acesso */
 .btn-acessar {
     margin-top: 10px;
     padding: 12px;
@@ -166,7 +155,6 @@ input[type="password"] {
     background-color: #0cc37a;
 }
 
-/* Esqueceu a senha */
 .forgot {
     text-align: center;
     margin: 15px 0;
@@ -183,7 +171,6 @@ input[type="password"] {
     text-decoration: underline;
 }
 
-/* Linha separadora */
 hr {
     border: 0;
     border-top: 1px solid #4e9c8d;
@@ -191,7 +178,6 @@ hr {
     width: 100%;
 }
 
-/* Botão Gov.br */
 .govbr-btn {
     background-color: white;
     border: none;
@@ -221,7 +207,6 @@ hr {
     color: #f4b000;
 }
 
-/* Primeira vez */
 .login-box p:last-child {
     margin-top: 15px;
     font-size: 0.85rem;
@@ -238,7 +223,6 @@ hr {
     text-decoration: underline;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
